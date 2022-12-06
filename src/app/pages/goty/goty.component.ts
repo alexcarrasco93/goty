@@ -15,8 +15,10 @@ export class GotyComponent {
   constructor(private gameService: GameService) {}
 
   voteGame(game: Game) {
+    game.loading = true;
     this.gameService.voteApiRequest$(game.id).subscribe({
       next(res) {
+        game.loading = false;
         Swal.fire('Thanks', res.msg, 'success');
       },
       error(err) {

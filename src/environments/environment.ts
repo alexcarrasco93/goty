@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  base_url: 'http://localhost:5000/goty-fire/us-central1/api',
+  base_url: 'https://us-central1-goty-fire.cloudfunctions.net/api',
+  // base_url: 'http://localhost:5000/goty-fire/us-central1/api',
   firebase: {
     projectId: 'goty-fire',
     appId: '1:732761088633:web:bee0f6a9bb82b480662aa8',

@@ -9,7 +9,13 @@
         <h5 class="card-title">{{game.name}}</h5>
         <p class="card-text">Click here to vote for this game.</p>
         <div class="d-grid gap-2">
-          <button class="btn btn-outline-primary" (click)="voteGame(game)">Vote</button>
+          <button class="btn btn-outline-primary" (click)="voteGame(game)">
+            <ng-container *ngIf="game.loading">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              <span class="sr-only"> Voting...</span>
+            </ng-container>
+            <span *ngIf="!game.loading">Vote</span>
+          </button>
         </div>
       </div>
     </div>
