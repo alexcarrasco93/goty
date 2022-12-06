@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "goty-fire": {
+      "hosting": {
+        "goty": [
+          "goty-fire"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "goty-fire"
+  }
+}
